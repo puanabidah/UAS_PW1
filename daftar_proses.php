@@ -32,8 +32,6 @@
 
             $password = $password_1;
 
-            //$password = password_hash($password, PASSWORD_DEFAULT);
-
             $query = "INSERT INTO user VALUES('$username', '$password')";
             
             mysqli_query($koneksi, $query);
@@ -43,7 +41,7 @@
             echo "<script>alert('Akun anda berhasil dibuat'); location='login.php'</script>";
         }
         else {
-            echo "mysqli_error($koneksi)";
+            echo mysqli_error($koneksi);
         }
 
     }

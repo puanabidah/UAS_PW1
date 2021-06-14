@@ -1,17 +1,5 @@
 <?php 
 
-session_start();
-include ('koneksi.php');
-
-if(!isset($_SESSION['username'])){
-    header("location:login.php");
-}
-    
-if(isset($_SESSION['username'])){
-    $username = $_SESSION['username'];
-}
-
-
 if(isset($_GET['id'])) {
 	include('koneksi.php');
 	$id = $_GET['id'];
